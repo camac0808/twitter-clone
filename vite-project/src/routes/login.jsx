@@ -131,7 +131,7 @@ export default function Login() {
     <>
       <Wrapper>
         <Title>
-          Login <Emoji>𝕏</Emoji>
+          Log <Emoji>𝕏</Emoji>
         </Title>
         {isLoading ? (
           <LoadingScreen />
@@ -139,7 +139,11 @@ export default function Login() {
           <>
             <Form onSubmit={handleSubmit(onLogin)}>
               <Input type="email" placeholder="email" {...register("email", { required: true })} />
-              <Input type="password" placeholder="password" {...register("password", { required: true })} />
+              <Input
+                type="password"
+                placeholder="password"
+                {...register("password", { required: true })}
+              />
               <SubmitButton type="submit">Login</SubmitButton>
 
               {/* useForm errors와 catch error */}
